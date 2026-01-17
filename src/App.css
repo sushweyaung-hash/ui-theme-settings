@@ -1,0 +1,113 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Light theme */
+.app-light {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+/* Dark theme */
+.app-dark {
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 900px;
+  padding: 24px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 16px;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  background: rgba(15, 23, 42, 0.04);
+  backdrop-filter: blur(4px);
+}
+
+/* Make card background adapt a bit to dark mode */
+.app-dark .card {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.settings-panel h2,
+.preview-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.setting-group {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.setting-group span {
+  font-weight: 500;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background-color: #e5e7eb;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.app-dark .btn {
+  background-color: #1f2937;
+  color: #e5e7eb;
+}
+
+.btn.active {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+}
+
+.reset-btn {
+  margin-top: 12px;
+  background-color: #f97373;
+  color: white;
+}
+
+.preview-message {
+  margin-top: 8px;
+}
+
+/* Responsive for small screens */
+@media (max-width: 700px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
